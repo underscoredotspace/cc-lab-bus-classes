@@ -27,4 +27,10 @@ class Bus
   def empty()
     @passengers.clear()
   end
+
+  def pick_up_from_stop(stop)
+    @passengers += stop.queue
+    #clear the stop
+    
+  end
 end 
