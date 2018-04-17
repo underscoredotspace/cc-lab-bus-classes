@@ -16,8 +16,11 @@ class Bus
     @passengers.count
   end
 
-  def pick_up_passenger(person)
-    @passengers.push(person)
+  def pick_up(passenger)
+    @passengers.push(passenger)
   end
 
+  def drop_off(passenger)
+    @passengers.delete(passenger)
+  end 
 end 
