@@ -16,4 +16,8 @@ class Bus
     @passengers.count
   end
 
+  def pick_up_passenger(person)
+    @passengers.push(person)
+  end
+
 end 
