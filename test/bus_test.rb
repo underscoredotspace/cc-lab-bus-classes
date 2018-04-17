@@ -44,4 +44,11 @@ class TestBus < MiniTest::Test
     assert_equal(0, @bus1.number_of_passengers())
   end
 
+  def test_empty_bus
+    passenger2 = Person.new("Timmy", 4)
+    @bus1.pick_up(@passenger1)
+    @bus1.pick_up(passenger2)
+    @bus1.empty()
+    assert_equal(0, @bus1.number_of_passengers())
+  end
 end
