@@ -22,4 +22,12 @@ class TestBus < MiniTest::Test
   def test_can_drive
     assert_equal("Brum brum", @bus1.drive)
   end
+
+  def test_has_passengers
+    assert_equal([], @bus1.passengers)
+  end
+
+  def test_passenger_count
+    assert_equal(0, @bus1.number_of_passengers())
+  end  
 end
