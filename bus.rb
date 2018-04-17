@@ -24,13 +24,12 @@ class Bus
     @passengers.delete(passenger)
   end
 
-  def empty()
+  def empty() 
     @passengers.clear()
   end
 
   def pick_up_from_stop(stop)
     @passengers += stop.queue
-    #clear the stop
-    
+    stop.empty()
   end
 end 
